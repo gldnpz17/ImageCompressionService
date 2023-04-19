@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Image Compression",
+  "description": "Compresses images",
+  "version": "1.0.0",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "host_permissions": ["*://*/*"],
+  "permissions": [
+    "declarativeNetRequest"
+  ],
+  "declarative_net_request" : {
+    "rule_resources" : [{
+      "id": "ruleset_1",
+      "enabled": true,
+      "path": "rules.json"
+    }]
+  }
+}

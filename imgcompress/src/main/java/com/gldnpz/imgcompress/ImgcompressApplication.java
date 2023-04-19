@@ -31,6 +31,11 @@ public class ImgcompressApplication {
 		SpringApplication.run(ImgcompressApplication.class, args);
 	}
 
+	@GetMapping("/health")
+	public String healthCheck() {
+		return "Everything's OK";
+	}
+
 	@GetMapping("/compress")
 	@ResponseBody
 	public ResponseEntity<InputStreamResource> compressImage(@RequestParam String url, @RequestParam Float quality) throws IOException {
